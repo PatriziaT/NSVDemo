@@ -1,0 +1,37 @@
+<ion-header>
+    <!-- <ion-title>{{ 'SEARCH_TITLE' | translate }}</ion-title> -->
+    <ion-navbar>
+      <ion-title>Welcome to NSV Demo!</ion-title>
+     
+        <div><img class="logo" height="50" width="70" src="assets/imgs/nsvlogo.jpg"></div>
+        
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+    <ion-content padding>
+        <h5>Help Parents and Schools Understand How
+     A Child’s Behaviors Lead to Violence </h5> 
+       <p>
+         Please enter in search below, one of the following behaviors:
+       </p>
+       <ul>
+         <li>Threatening </li>
+         <li>Depressive </li>
+         <li>Overreaction to changes </li>
+         <li>Panic attacks </li> 
+         <li>Sabotage </li>
+       </ul>
+     
+  <ion-searchbar (ionInput)="getItems($event)" placeholder="Search the item list, e.g Depressive"></ion-searchbar>
+  <ion-list>
+    <button ion-item (click)="openItem(item)" *ngFor="let item of currentItems">
+     
+      <h2>{{item.name}}</h2>
+      <p>{{item.about}}</p>
+
+    </button>
+  </ion-list>
+</ion-content>
+

@@ -1,0 +1,21 @@
+<!-- ********* List of Behaviors ********* -->
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>List of Behaviors</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of currentItems">
+      <button ion-item (click)="openItem(item)">
+        <h2>{{item.name}}</h2>
+        <!-- ** For the purpose of preshowing a piece of the upcoming about** -->
+        <!-- <p>{{item.about}}</p> -->
+        <!-- <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note> -->
+      </button>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
